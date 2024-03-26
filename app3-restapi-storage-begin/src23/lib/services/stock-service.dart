@@ -3,7 +3,7 @@
 import 'dart:async';
 import '../services/network.dart';
 
-const apiToken = 'QTVXCOASBD3ZIC1J';
+const apiToken = '4SJMXZA9UBAHLR54';
 
 class StockService {
 
@@ -25,9 +25,7 @@ class StockService {
   }
 
   Future getQuote(String symbol) async {
-    //TODO: Complete this method.
-    var url = Uri.parse('');
-
+    var url = Uri.parse('https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=$symbol&apikey=$apiToken');
     print('url: $url');
     NetworkService networkService = NetworkService(url);
     var data = await networkService.getData();
